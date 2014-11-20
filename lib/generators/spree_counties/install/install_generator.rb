@@ -18,6 +18,15 @@ module SpreeCounties
         run 'bundle exec rake railties:install:migrations FROM=spree_counties'
       end
 
+      def run_migrations
+        run_migrations = options[:auto_run_migrations] || ['', 'y', 'Y'].include?(ask 'Would you like to run the migrations now? [Y/n]')
+        if run_migrations
+          run 'bundle exec rake db:migrate'
+        else
+          puts 'Skipping rake db:migrate, don\'t forget to run it!'
+        end
+      end
+
       def run_seeds
         run_seeds = options[:auto_run_seeds] || ['', 'y', 'Y'].include?(ask 'Would you like to load chilean example seeds now? [Y/n]')
         if run_seeds
@@ -25,15 +34,6 @@ module SpreeCounties
           run 'bundle exec rails runner db/seeds/counties.rb'
         else
           puts 'Skipping bundle exec rails runner, don\'t forget to run it!'
-        end
-      end
-
-      def run_migrations
-        run_migrations = options[:auto_run_migrations] || ['', 'y', 'Y'].include?(ask 'Would you like to run the migrations now? [Y/n]')
-        if run_migrations
-          run 'bundle exec rake db:migrate'
-        else
-          puts 'Skipping rake db:migrate, don\'t forget to run it!'
         end
       end
     end
