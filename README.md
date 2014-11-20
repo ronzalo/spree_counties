@@ -1,7 +1,11 @@
-SpreeCounties
+Spree Counties
 =============
 
-Introduction goes here.
+Lets your users pick counties from states list in address's step
+
+![alt tag](https://raw.githubusercontent.com/ronzalo/spree_counties/master/lib/generators/spree_counties/install/templates/1.png)
+
+![alt tag](https://raw.githubusercontent.com/ronzalo/spree_counties/master/lib/generators/spree_counties/install/templates/2.png)
 
 Installation
 ------------
@@ -36,4 +40,4 @@ Simply add this require statement to your spec_helper:
 require 'spree_counties/factories'
 ```
 
-Copyright (c) 2014 [name of extension creator], released under the New BSD License
+Copyright (c) 2014 Gonzalo Moreno C, released under the New BSD License
