@@ -1,15 +1,15 @@
 # Sample localization file for English. Add more files in this directory for other locales.
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
-en:
+es:
   activerecord:
     attributes:
       spree/county:
-        name: Name
+        name: Nombre
     models:
       spree/county:
-        one: County
-        other: Counties
+        one: Comuna.
+        other: Comunas
   spree:
-    counties: "Counties"
-    new_county: "New county"
+    counties: "Comunas"
+    new_county: "Nueva comuna"
