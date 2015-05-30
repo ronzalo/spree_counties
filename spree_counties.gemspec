@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
   s.requirements << 'none'
 
   s.add_dependency('spree_core', '~> 3.0')
+  s.add_dependency('spree_backend', '~> 3.0')
 
   s.add_development_dependency 'capybara', '~> 2.4'
   s.add_development_dependency 'coffee-rails'
@@ -27,6 +28,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rspec-rails',  '~> 3.1'
   s.add_development_dependency 'sass-rails', '~> 4.0.2'
   s.add_development_dependency 'selenium-webdriver'
+  s.add_development_dependency 'shoulda-matchers'
   s.add_development_dependency 'simplecov'
   s.add_development_dependency 'sqlite3'
 end

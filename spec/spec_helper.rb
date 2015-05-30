@@ -18,6 +18,7 @@ require File.expand_path('../dummy/config/environment.rb',  __FILE__)
 require 'rspec/rails'
 require 'database_cleaner'
 require 'ffaker'
+require 'shoulda/matchers'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
@@ -26,8 +27,10 @@ Dir[File.join(File.dirname(__FILE__), 'support/**/*.rb')].each { |f| require f }
 # Requires factories and other useful helpers defined in spree_core.
 require 'spree/testing_support/authorization_helpers'
 require 'spree/testing_support/capybara_ext'
-require 'spree/testing_support/controller_requests'
 require 'spree/testing_support/factories'
+require 'spree/testing_support/preferences'
+require 'spree/testing_support/controller_requests'
+require 'spree/testing_support/flash'
 require 'spree/testing_support/url_helpers'
 
 # Requires factories defined in lib/spree_counties/factories.rb
@@ -35,7 +38,9 @@ require 'spree_counties/factories'
 
 RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
-
+  config.include Spree::TestingSupport::ControllerRequests, :type => :controller
+  config.include Devise::TestHelpers, :type => :controller
+  
   # Infer an example group's spec type from the file location.
   config.infer_spec_type_from_file_location!
 
