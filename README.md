@@ -12,8 +12,14 @@ Installation
 
 Add spree_counties to your Gemfile:
 
+For 3-0-stable version:
 ```ruby
 gem 'spree_counties'
+```
+
+For 2-3-stable version:
+```ruby
+gem 'spree_counties', '~> 2.3.6'
 ```
 
 Bundle your dependencies and run the installation generator:
