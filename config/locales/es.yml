@@ -12,4 +12,5 @@ es:
         other: Comunas
   spree:
     counties: "Comunas"
+    county: "Comuna"
     new_county: "Nueva comuna"

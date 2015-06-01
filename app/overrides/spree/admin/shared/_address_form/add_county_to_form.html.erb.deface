@@ -1,0 +1,10 @@
+<!-- insert_bottom "div[data-hook=address_fields]" -->
+<div class="field <%= "#{type}-row" %>">
+  <%= f.label :county_id, Spree.t(:county) %>
+  <span id="<%= s_or_b %>county">
+    <%= f.text_field :county_name,
+          :style => "display: #{f.object.state.counties.empty? ? 'block' : 'none' };",
+         :disabled => !f.object.state.counties.empty?, :class => 'fullwidth county_name' %>
+    <%= f.collection_select :county_id, f.object.state.counties.sort, :id, :name, {:include_blank => true}, {:class => 'select2 fullwidth', :style => "display: #{f.object.state.counties.empty? ? 'none' : 'block' };", :disabled => f.object.state.counties.empty?} %>
+  </span>
+</div>

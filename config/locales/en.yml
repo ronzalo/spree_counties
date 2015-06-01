@@ -12,4 +12,5 @@ en:
         other: Counties
   spree:
     counties: "Counties"
+    county: "County"
     new_county: "New county"
