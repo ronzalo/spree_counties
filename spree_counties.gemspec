@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_counties'
-  s.version     = '3.0.1'
+  s.version     = '3.0.2'
   s.summary     = 'Lets your users pick counties from states list in address\'s step'
   s.description = 'Add county model to address'
   s.required_ruby_version = '>= 1.9.3'

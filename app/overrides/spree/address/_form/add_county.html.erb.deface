@@ -28,7 +28,7 @@
     <%= Spree.t(:county) %>
     <span class="required" id=<%="#{address_id}county-required"%>>*</span>
   <% end %>
-  <%= form.collection_select(:county_id, form.object.state.counties.sort,
+  <%= form.collection_select(:county_id, form.object.state ? form.object.state.counties.sort : {},
                           :id, :name,
                           {:include_blank => true},
                           {:class => "form-control required",}) %>
