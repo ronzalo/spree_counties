@@ -17,7 +17,7 @@ Spree.ready ($) ->
       $('#' + region + 'state select').val()
 
   fillCounties = (data, region) ->
-    countiesRequired = true
+    countiesRequired = false
     counties = data.counties
 
     countyPara = ($ '#' + region + 'county')

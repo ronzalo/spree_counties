@@ -23,6 +23,11 @@ bundle
 bundle exec rails g spree_counties:install
 ```
 
+Documentation
+-------------
+
+Pay atention to Spree::Address#require_county? method if you want validation in county fields
+
 Testing
 -------
 
