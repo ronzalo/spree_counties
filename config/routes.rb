@@ -6,7 +6,7 @@ Spree::Core::Engine.routes.draw do
 
   namespace :admin do
     resources :counties
-    resource :states do
+    resources :states do
       resources :counties
     end
   end
