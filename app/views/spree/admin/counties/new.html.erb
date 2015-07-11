@@ -4,7 +4,7 @@
   <%= Spree.t(:new_county) %>
 <% end %>
 
-<%= form_for [:admin, @county] do |f| %>
+<%= form_for [:admin, @state, @county] do |f| %>
   <fieldset>
     <%= render :partial => 'form', :locals => { :f => f } %>
     <%= render :partial => 'spree/admin/shared/new_resource_links' %>

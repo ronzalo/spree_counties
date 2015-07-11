@@ -1,6 +1,7 @@
 module Spree
   module Admin
     class CountiesController < Spree::Admin::ResourceController
+      belongs_to 'spree/state'
       before_action :load_data
 
       def index
@@ -12,20 +13,17 @@ module Spree
 
       protected
 
-        def collection
-          return @collection if @collection.present?
-          params[:q] ||= {}
+        def location_after_save
+          admin_state_counties_url(@state)
+        end
 
-          @collection = super
-          @search = @collection.ransack(params[:q])
-          @collection = @search.result
-          @collection
+        def collection
+          super.order(:name)
         end
 
         def load_data
           @states = Spree::State.order(:name)
         end
-
     end
   end
 end
