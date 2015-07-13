@@ -37,10 +37,10 @@
       form.collection_select(:county_id, address.state ? address.state.counties : {},
                              :id, :name,
                              {:include_blank => true},
-                             {:class => have_counties ? "form-control required" : "form-control",
+                             {:class => (have_counties || address.require_county?) ? "form-control required" : "form-control",
                              :disabled => !have_counties}) +
       form.text_field(:county_name,
-                      :class => !have_counties ? 'form-control required' : 'form-control hidden',
+                      :class => (!have_counties || address.require_county?) ? 'form-control required' : 'form-control hidden',
                       :disabled => have_counties)
     ].join.gsub('"', "'").gsub("\n", "")
   %>
