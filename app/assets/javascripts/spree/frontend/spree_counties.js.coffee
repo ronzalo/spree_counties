@@ -1,8 +1,8 @@
 Spree.ready ($) ->
-  ($ '#bstate select').change ->
+  $(document).on 'change', '#bstate select', ->
     updateCounty 'b'
 
-  ($ '#sstate select').change ->
+  $(document).on 'change', '#sstate select', ->
     updateCounty 's'
 
   updateCounty = (region) ->
@@ -14,7 +14,7 @@ Spree.ready ($) ->
         fillCounties(Spree.Checkout[stateId], region)
 
   getStateId = (region) ->
-      $('#' + region + 'state select').val()
+    $('#' + region + 'state select').val()
 
   fillCounties = (data, region) ->
     countiesRequired = true
