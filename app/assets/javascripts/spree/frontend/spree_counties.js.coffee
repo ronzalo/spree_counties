@@ -63,16 +63,16 @@ Spree.ready ($) ->
         countyInput.removeClass('hidden')
         countySelect.removeClass('required')
 
-    ($ '#bstate select').change ->
+    $(document).on 'change', '#bstate select', ->
       Spree.updateCounty 'b'
 
-    ($ '#sstate select').change ->
+    $(document).on 'change', '#sstate select', ->
       Spree.updateCounty 's'
 
-    ($ '#bcountry select').change ->
+    $(document).on 'change', '#bcountry select', ->
       Spree.updateCounty 'b'
 
-    ($ '#scountry select').change ->
+    $(document).on 'change', '#scountry select', ->
       Spree.updateCounty 's'
 
     Spree.updateCounty 'b'
