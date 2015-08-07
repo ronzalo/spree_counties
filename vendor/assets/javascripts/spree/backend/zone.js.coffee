@@ -37,6 +37,7 @@ show_country = ->
 
   ($ '#country_members').show()
 
+
 show_state = ->
   ($ '#country_members :input').each ->
     ($ this).prop 'disabled', true
@@ -73,4 +74,3 @@ show_county = ->
     ($ this).prop 'disabled', false
 
   ($ '#county_members').show()
-

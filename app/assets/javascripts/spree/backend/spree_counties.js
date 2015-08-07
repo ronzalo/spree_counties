@@ -28,5 +28,3 @@ var update_county = function (region, done) {
     if(done) done();
   });
 };
-
-//= require_tree .
