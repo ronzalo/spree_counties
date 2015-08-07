@@ -14,3 +14,4 @@ es:
     counties: "Comunas"
     county: "Comuna"
     new_county: "Nueva comuna"
+    county_based: "Basado en Comuna"
