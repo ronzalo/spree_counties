@@ -1,4 +1,4 @@
-<div class="radio">
+<div class="radio" data-selected="<%=zone_form.object.kind == 'county' %>">
   <%= label_tag :county_based do %>
     <%= zone_form.radio_button('kind', 'county', { :id => 'county_based' }) %>
     <%= Spree.t(:county_based) %>
