@@ -1,0 +1,16 @@
+<div id="county_members" data-hook="member">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h1 class="panel-title">
+        <%= Spree.t(:counties) %>
+      </h1>
+    </div>
+
+    <div class="panel-body">
+      <%= zone_form.field_container :county_ids, class: ['form-group'] do %>
+        <%= zone_form.label :county_ids, Spree.t(:counties) %>
+        <%= zone_form.collection_select :county_ids, @counties, :id, :name, {}, { :multiple => true, :class => "select2" } %>
+      <% end %>
+    </div>
+  </div>
+</div>
