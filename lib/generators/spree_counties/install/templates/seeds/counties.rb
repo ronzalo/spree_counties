@@ -1,23 +1,23 @@
 # encoding: utf-8
 
-country = Spree::Country.find_or_create_by name:'Chile', iso_name: "CHILE", iso: "CL", iso3: "CHL", numcode: 152, states_required: false
+country = Spree::Country.find_by name:'Chile', iso_name: "CHILE", iso: "CL", iso3: "CHL", numcode: 152
 
 #Chilean states
-xi   = Spree::State.find_or_create_by name: 'Aysén del General Carlos Ibanez', abbr: 'AI', country: country
-ii   = Spree::State.find_or_create_by name: 'Antofagasta', abbr: 'AN', country: country
-ix   = Spree::State.find_or_create_by name: 'Araucanía', abbr: 'AR', country: country
-xv   = Spree::State.find_or_create_by name: 'Arica y Parinacota', abbr: 'AP', country: country
-iii  = Spree::State.find_or_create_by name: 'Atacama', abbr: 'AT', country: country
-viii = Spree::State.find_or_create_by name: 'Bio-Bío', abbr: 'BI', country: country
-iv   = Spree::State.find_or_create_by name: 'Coquimbo', abbr: 'CO', country: country
-vi   = Spree::State.find_or_create_by name: 'Libertador General Bernardo O\'Higgins', abbr: 'LI', country: country
-x    = Spree::State.find_or_create_by name: 'Los Lagos', abbr: 'LL', country: country
-xii  = Spree::State.find_or_create_by name: 'Magallanes y de la Antártica Chilena', abbr: 'MA', country: country
-vii  = Spree::State.find_or_create_by name: 'Maule', abbr: 'ML', country: country
-rm   = Spree::State.find_or_create_by name: 'Metropolitana', abbr: 'RM', country: country
-xiv  = Spree::State.find_or_create_by name: 'Los Ríos', abbr: 'LR', country: country
-i    = Spree::State.find_or_create_by name: 'Tarapacá', abbr: 'TA', country: country
-v    = Spree::State.find_or_create_by name: 'Valparaíso', abbr: 'VS', country: country
+xv   = Spree::State.find_by name: 'Arica y Parinacota', abbr: 'AP', country: country
+i    = Spree::State.find_by name: 'Tarapacá', abbr: 'TA', country: country
+ii   = Spree::State.find_by name: 'Antofagasta', abbr: 'AN', country: country
+iii  = Spree::State.find_by name: 'Atacama', abbr: 'AT', country: country
+iv   = Spree::State.find_by name: 'Coquimbo', abbr: 'CO', country: country
+v    = Spree::State.find_by name: 'Valparaíso', abbr: 'VS', country: country
+vi   = Spree::State.find_by name: 'Libertador General Bernardo O\'Higgins', abbr: 'LI', country: country
+vii  = Spree::State.find_by name: 'Maule', abbr: 'ML', country: country
+viii = Spree::State.find_by name: 'Bio-Bío', abbr: 'BI', country: country
+ix   = Spree::State.find_by name: 'Araucanía', abbr: 'AR', country: country
+x    = Spree::State.find_by name: 'Los Lagos', abbr: 'LL', country: country
+xi   = Spree::State.find_by name: 'Aisén del General Carlos Ibáñez del Campo', abbr: 'AI', country: country
+xii  = Spree::State.find_by name: 'Magallanes y Antártica Chilena', abbr: 'MA', country: country
+rm   = Spree::State.find_by name: 'Región Metropolitana de Santiago', abbr: 'RM', country: country
+xiv  = Spree::State.find_by name: 'Los Ríos', abbr: 'LR', country: country
 
 Spree::County.find_or_create_by(name: 'Arica',                code: '15101', state: xv)
 Spree::County.find_or_create_by(name: 'Camarones',            code: '15102', state: xv)
