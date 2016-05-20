@@ -31,4 +31,8 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'shoulda-matchers'
   s.add_development_dependency 'simplecov'
   s.add_development_dependency 'sqlite3'
+  s.add_development_dependency 'better_errors'
+  s.add_development_dependency 'binding_of_caller'
+  s.add_development_dependency 'pry'
+  s.add_development_dependency 'spreadsheet'
 end
