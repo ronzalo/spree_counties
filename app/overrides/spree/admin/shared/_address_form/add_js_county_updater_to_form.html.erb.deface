@@ -1,0 +1,8 @@
+<!-- insert_after "div[data-hook=address_fields]" -->
+<% content_for :head do %>
+  <%= javascript_tag do %>
+    $(document).ready(function(){
+      $('span#<%= s_or_b %>state .select2').on('change', function() { update_county('<%= s_or_b %>'); });
+    });
+  <% end %>
+<% end %>
