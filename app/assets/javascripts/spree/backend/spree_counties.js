@@ -19,8 +19,9 @@ var update_county = function (region, done) {
 
   var state = $('span#' + region + 'state .select2').select2('val');
   var county_select = $('span#' + region + 'county select.select2');
+  var county_input = $('span#' + region + 'county input.county_name');
 
-  $.get('/api/counties?state_id=' + state, function (data) {
+  $.get('/api/counties' + '?state_id=' + state, function (data) {
     var counties = data.counties;
     if (counties.length > 0) {
       county_select.html('');
@@ -30,14 +31,16 @@ var update_county = function (region, done) {
       }].concat(counties);
       $.each(counties_with_blank, function (pos, county) {
         var opt = $(document.createElement('option'))
-          .prop('value', state.id)
+          .prop('value', county.id)
           .html(county.name);
         county_select.append(opt);
       });
       county_select.prop('disabled', false).show();
       county_select.select2();
+      county_input.hide().prop('disabled', true);
 
     } else {
+      county_input.prop('disabled', false).show();
       county_select.select2('destroy').hide();
     }
 
